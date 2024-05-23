@@ -1,0 +1,119 @@
+@import "../../variable";
+
+.hero {
+  background: $maincolor url("../../../public/main_img.png") no-repeat;
+  padding: 50px $desktop_padding 0;
+  height: 600px;
+  background-position: 150px bottom;
+  background-size: 700px;
+  display: flex;
+  justify-content: end;
+
+
+  @media screen and (max-width: 1700px) {
+    background-size: 500px;
+  }
+
+  @media screen and (max-width: 1400px) {
+    justify-content: center;
+    background-position: center bottom;
+    background-size: 550px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    background-position: center bottom;
+    padding: 40px $phone_padding 0;
+    background-size: 600px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 30px $phone_padding 0;
+    background-size: 500px;
+    height: 500px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 20px $phone_padding 0;
+    background-size: 420px;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 30px $phone_padding 0;
+    background-size: 350px;
+  }
+
+  div {
+    align-self: center;
+
+    @media screen and (max-width: 1400px) {
+      align-self: start;
+    }
+
+    .mainText {
+      color: rgb(255, 255, 255);
+      font-size: 66px;
+      font-weight: 800;
+      line-height: 95%;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      max-width: 664px;
+
+      @media screen and (max-width: 1700px) {
+        align-self: start;
+        max-width: 550px;
+        font-size: 56px;
+      }
+
+      @media screen and (max-width: 1400px) {
+        max-width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 46px;
+      }
+
+      @media screen and (max-width: 1100px) {
+        max-width: 70%;
+        font-size: 36px;
+      }
+
+      @media screen and (max-width: 900px) {
+        max-width: 90%;
+      }
+
+      @media screen and (max-width: 600px) {
+        font-size: 30px;
+        max-width: 80%;
+      }
+
+      @media screen and (max-width: 400px) {
+        font-size: 26px;
+        max-width: 90%;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      margin-top: 25px;
+      border-radius: 15px;
+      border: none;
+      background: rgb(0, 0, 0);
+      width: 222px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media screen and (max-width: 1400px) {
+        margin: 25px auto 0 auto;
+      }
+
+      a {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+      }
+    }
+  }
+}

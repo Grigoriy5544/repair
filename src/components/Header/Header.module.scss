@@ -1,0 +1,85 @@
+@import "../../variable";
+
+.header {
+  height: 100px;
+  width: 100%;
+  background: $maincolor;
+
+  padding: 35px $desktop_padding;
+
+  @media screen and (max-width: 1100px) {
+    padding: 20px $phone_padding;
+    height: 80px;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+
+  div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    img {
+      height: 30px;
+    }
+
+    span {
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 700px) {
+      gap: 5px;
+
+      img {
+        height: 20px;
+      }
+
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 40px;
+
+    li {
+      font-size: 18px;
+      cursor: pointer;
+
+      a {
+        font-size: 18px;
+        cursor: pointer;
+        color: white;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+  }
+
+  button {
+    width: 162px;
+    height: 55px;
+    padding: 2px;
+    border: 2px solid rgb(255, 196, 100);
+    border-radius: 15px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      color: rgb(255, 196, 100);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 19px;
+    }
+  }
+}

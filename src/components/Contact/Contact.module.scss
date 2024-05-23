@@ -1,0 +1,161 @@
+@import "../../variable";
+
+
+.Contact {
+  padding: 50px $desktop_padding;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 80px;
+  height: fit-content;
+
+  @media screen and (max-width: 1400px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 1100px) {
+    padding: 50px $phone_padding;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 8px;
+    width: 100%;
+
+
+    h3 {
+      margin: 0 0 24px 0;
+      padding: 0;
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 100%;
+      text-align: left;
+    }
+
+    p, a {
+      margin: 0;
+      padding: 0;
+      color: black;
+      font-size: 26px;
+      font-weight: 500;
+    }
+
+    .adress {
+      margin-top: 15px;
+    }
+
+    .applicationText {
+      margin-top: 30px;
+      font-size: 34px;
+    }
+
+    .application {
+      margin-top: 10px;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      gap: 20px;
+
+
+      input {
+        background: transparent;
+        border-radius: 15px;
+        border: 3px solid rgb(255, 196, 100);
+        padding: 8px 6px;
+
+        &::-webkit-input-placeholder {
+          color: #5b5b5b;
+        }
+
+        &:active, &:focus {
+          outline: none;
+          border: 3px solid rgb(255, 196, 100);
+        }
+      }
+
+      button {
+        border: none;
+        border-radius: 15px;
+        background: #00d800;
+        width: 162px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &:hover {
+          scale: 1.05;
+        }
+
+
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 19px;
+        transition: all .3s ease;
+
+
+        &:disabled {
+          border: 3px solid rgb(153, 50, 128);
+          background: transparent;
+
+
+          color: rgb(153, 50, 128);
+
+
+          &:hover {
+            scale: 0.95;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1400px) {
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+      }
+
+
+      @media screen and (max-width: 500px) {
+        input {
+          max-width: 95%;
+          padding: 6px 4px;
+          font-size: 30px;
+        }
+      }
+
+
+      @media screen and (max-width: 300px) {
+        input {
+          max-width: 95%;
+          padding: 4px 2px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    h3 {
+      margin: 0 0 16px 0 !important;
+      font-size: 36px !important;
+    }
+
+
+    p {
+      font-size: 18px !important;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    h3 {
+      font-size: 30px !important;
+    }
+  }
+}
